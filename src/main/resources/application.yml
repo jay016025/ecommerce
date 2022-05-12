@@ -1,0 +1,18 @@
+# DataSource Config
+# DB_CLOSE_DELAY=-1: 代表當 connection 斷掉後保留 db 的資料，不要清空。
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:order;DB_CLOSE_DELAY=-1;MODE=MYSQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+
+# auto-mapping-behavior: partial
+#   全域屬性，優先序低於autoMapping，會自動映射無定義巢狀結果集對映的結果集。
+# map-underscore-to-camel-case
+#   MyBatis預設屬性名稱與資料庫欄位名稱一致才可映射，但Java使用駝峰式命名，此設定開啟駝峰式轉換。
+mybatis:
+  configuration:
+    auto-mapping-behavior: partial
+    auto-mapping-unknown-column-behavior: none
+    map-underscore-to-camel-case: true
