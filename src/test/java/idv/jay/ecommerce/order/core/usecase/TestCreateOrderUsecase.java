@@ -16,7 +16,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
     MockitoExtension.class: 擴展使用mockito API;
  */
 @ExtendWith(MockitoExtension.class)
-public class TestCreateOrderUsecaseTest {
+public class TestCreateOrderUsecase {
 
     @Mock
     private CommodityRepo repo;
